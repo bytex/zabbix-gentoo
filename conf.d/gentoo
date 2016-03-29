@@ -1,0 +1,1 @@
+UserParameter=gentoo.glsa,wc -l /tmp/glsa.log | awk '{print 1+1*$1-1}'

@@ -1,0 +1,2 @@
+UserParameter=backup.discovery,/etc/zabbix/bin/backup.discovery
+UserParameter=backup.size[*],ls -str1 --block-size=1 $1 | tail -n 1 | awk '{print $$1}'

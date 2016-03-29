@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo '{'
+echo '	"data":['
+for i in `ls -1d /mnt/backup/* | egrep -v '(lost.found|postgresql|scripts)'`; do
+	i2=`echo $i | sed -e 's|/|\\\/|g'`
+	echo "		{"
+	echo "			\"{#BACKUP}\":\"$i2\","
+	echo "		},"
+done
+echo '	]'
+echo '}'
+
