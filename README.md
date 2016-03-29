@@ -1,6 +1,13 @@
 # zabbix-gentoo
 Zabbix configuration files for Gentoo
 
+## Prerequisites
+
+Make sure that `zabbix_agentd.conf` has this line:
+```
+Include=/etc/zabbix/conf.d/
+```
+
 ## GLSA
 
 First you need to emerge the gentoolkit package.
